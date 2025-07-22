@@ -1,5 +1,7 @@
 import Card from "@/components/card";
 import Faixa from "@/components/faixa";
+import Posts from "@/components/posts";
+import Data from "@/data/dados";
 import Image from "next/image";
 
 export default function Home() {
@@ -17,7 +19,12 @@ export default function Home() {
         <div>rotas</div>
         <div>Search</div>
       </header>
-      <Card name={"Vic"} price={'20,00'} type={"Avon"}/>
+      <div className="flex justify-between">
+        {Data && Data.map((item) => (
+          <Card key={item.key} name={item.name} price={item.price} type={item.type} img={item.img}/>
+        ))}
+        <Posts/>
+      </div>
       <footer className="items-center">
         Made by: Victória Miranda
       </footer>

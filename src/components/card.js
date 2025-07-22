@@ -1,11 +1,15 @@
 import Image from "next/image"
 
-export default function Card({ name, price, type }){
+export default function Card({ name, price, type, img }){
+    if(price%1==0){
+      price = price+ ",00";
+    }else(price%1!=0)
+      price = price.toString().replace('.', ',');
     return(
-        <div className="rounded-2xl border-2 flex flex-col gap-2 p-5 items-center justify-center w-56">
+        <div className="rounded-2xl border-2 flex flex-col gap-2 p-5 items-center justify-center w-56 bg-white">
             <Image
               className="dark"
-              src="/vercel.svg"
+              src={img}
               alt="Vercel logomark"
               width={150}
               height={150}
