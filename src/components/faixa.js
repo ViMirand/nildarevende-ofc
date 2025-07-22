@@ -1,0 +1,42 @@
+export default function Faixa({type1, type2}){
+    return(
+        <div className="flex font-bold bg-blue-950 text-amber-50">
+            {type1}
+            °
+            {type2}
+            °
+            {type1}
+            °
+            {type2}
+            °
+            {type1}
+            °
+            {type2}
+            °
+            {type1}
+            °
+            {type2}
+            °
+            {type1}
+            °
+            {type2}
+            °
+            {type1}
+            °
+            {type2}
+            °
+            {type1}
+            °
+            {type2}
+            °
+            {type1}
+            °
+            {type2}
+            °
+            {type1}
+            °
+            {type2}
+            °
+        </div>
+    )
+}
