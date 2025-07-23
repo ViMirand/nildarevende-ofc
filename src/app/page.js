@@ -19,13 +19,15 @@ export default function Home() {
         <div>rotas</div>
         <div>Search</div>
       </header>
-      <div className="flex justify-between">
-        {Data && Data.map((item) => (
-          <Card key={item.key} name={item.name} price={item.price} type={item.type} img={item.img}/>
-        ))}
+      <div className="flex justify-between h-170">
+        <div className="flex flex-wrap gap-3 w-full pl-5 pr-5">
+          {Data && Data.map((item) => (
+            <Card key={item.key} name={item.name} price={item.price} type={item.type} img={item.img}/>
+          ))}
+        </div>
         <Posts/>
       </div>
-      <footer className="items-center">
+      <footer className=" flex justify-center mt-1">
         Made by: Victória Miranda
       </footer>
     </div>

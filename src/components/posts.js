@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Posts(){
     return(
-        <div className="bg-indigo-950 rounded-l-4xl w-1/3">
+        <div className="bg-indigo-950 rounded-l-4xl w-1/2 h-auto">
             <Image
                 className="dark"
                 src="/vercel.svg"
