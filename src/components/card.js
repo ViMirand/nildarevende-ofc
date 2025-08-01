@@ -6,7 +6,7 @@ export default function Card({ name, price, type, img }){
     }else(price%1!=0)
       price = price.toString().replace('.', ',');
     return(
-        <div className="rounded-2xl border-2 flex flex-col gap-2 p-5 items-center justify-center w-56 bg-white">
+        <div className="rounded-2xl border-2 flex flex-col gap-2 px-4 py-5 items-center justify-center w-50 bg-white">
             <Image
               className="dark bg-gray-300"
               src={img}
