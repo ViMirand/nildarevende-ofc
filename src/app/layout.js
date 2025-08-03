@@ -1,5 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Faixa from "@/components/faixa";
+import Image from "next/image";
+import NavBar from "@/components/navBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,6 +25,18 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Faixa type1={"Avon"} type2={"Natura"}/>
+            <header className="flex flex-1/3 justify-between items-center px-5">
+              <Image
+                className="dark"
+                src="/logo.svg"
+                alt="Nilda Revende logomark"
+                width={120}
+                height={120}
+              />
+              <NavBar/>
+              <div>Search</div>
+            </header>
         {children}
       </body>
     </html>
